@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FiClock, FiPower } from 'react-icons/fi';
 import logo from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
@@ -11,9 +11,12 @@ import {
   Schedule,
   Calender,
   NextAppointment,
+  Section,
+  Appointment,
 } from './styles';
 
 const Dashboard: React.FC = () => {
+  const [selectDate, setSelectDate] = useState(new Date());
   const { signOut, user } = useAuth();
 
   return (
@@ -57,6 +60,69 @@ const Dashboard: React.FC = () => {
               </span>
             </div>
           </NextAppointment>
+
+          <Section>
+            <strong>Manhã</strong>
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/29049924?s=460&u=7b42592758dd4e75e4fd438925fd5d0e2abee697&v=4"
+                  alt="Israel Batista"
+                />
+                <strong>Israel Batista</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/29049924?s=460&u=7b42592758dd4e75e4fd438925fd5d0e2abee697&v=4"
+                  alt="Israel Batista"
+                />
+                <strong>Israel Batista</strong>
+              </div>
+            </Appointment>
+          </Section>
+
+          <Section>
+            <strong>Manhã</strong>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/29049924?s=460&u=7b42592758dd4e75e4fd438925fd5d0e2abee697&v=4"
+                  alt="Israel Batista"
+                />
+                <strong>Israel Batista</strong>
+              </div>
+            </Appointment>
+
+            <Appointment>
+              <span>
+                <FiClock />
+                08:00
+              </span>
+              <div>
+                <img
+                  src="https://avatars0.githubusercontent.com/u/29049924?s=460&u=7b42592758dd4e75e4fd438925fd5d0e2abee697&v=4"
+                  alt="Israel Batista"
+                />
+                <strong>Israel Batista</strong>
+              </div>
+            </Appointment>
+          </Section>
         </Schedule>
         <Calender />
       </Content>
